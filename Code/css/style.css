@@ -58,14 +58,18 @@ li{
 }
 
 .division{
-	border-top:2px solid white; 
-	border-right:2px solid white; 
-	padding:inherit;
-	width:33.33%; 
-	height:inherit;
-	position:relative;
-	display:block; 
-	float:left;
+  border: 1px solid white;
+  /* border-right: 2px solid white; */
+  padding: 10px;
+  width: 33.33%;
+  height: inherit;
+  /* position: relative; */
+  display: block;
+  float: left;
+  /* margin-bottom: 0; */
+}
+.no-bottom{
+	border-bottom-width: 0 !important;
 }
 
 .carded{
