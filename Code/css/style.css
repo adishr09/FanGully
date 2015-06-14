@@ -54,6 +54,24 @@ li{
 .sub_content{
 	font: 18px lucida grande, sans-serif;
 	color:white;
+	text-align:center;
+}
+
+.division{
+	border-top:2px solid white; 
+	border-right:2px solid white; 
+	padding:inherit;
+	width:33.33%; 
+	height:inherit;
+	position:relative;
+	display:block; 
+	float:left;
+}
+
+.carded{
+	padding:1% 0 0 0; 
+	border-top:2px white solid; 
+	border-bottom:2px white solid;
 }
 
 .title{
