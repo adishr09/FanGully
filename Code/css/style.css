@@ -18,6 +18,9 @@ li{
 	margin:5% 0;
 }
  
+.circle{
+  width: 45% !important;
+}
 /*.bar{
 	background-color:rgba(255,255,255,1);
 	border-bottom:0px;
@@ -43,6 +46,14 @@ li{
   font-size: 24px;
 }
 
+.match_block{
+  display:inline-block;
+}
+
+.vs_block{
+  width: 10% !important; 
+  display:inline-block;
+}
 
 .sub_head{
 	text-align:center;
@@ -143,5 +154,14 @@ ol.sub_content{
 
 .textleft{
   text-align:left !important;  
+}
+
+
+.textright{
+  text-align:right !important;
+}
+
+.textcenter{
+  text-align:center;
 }
 
