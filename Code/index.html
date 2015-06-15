@@ -9,6 +9,8 @@
 	<link href="css/ratchet.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="js/ratchet.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
 	<script src="js/jquery.countdown.js"></script>
   </head>
   <body>
@@ -18,9 +20,9 @@
  <div class="content hidebg">
  		<div class="content-padded" style='margin-top:40px;margin-bottom:40px'>
 		  <h1 class="title title_rev">FANGULLY</h1>
-		  <hr class="rule">
+		  <hr class="rule150">
 		  <h4 class="title_4">GAME OF SKILL</h4>
-		  <hr class="rule">
+		  <hr class="rule150">
 	  </div>
 		<p class="sub_head">PLAY FANTASY CRICKET <br> & <br> WIN REAL CASH</p>
 		<div class="card card_revised" style="width:80%;margin-top:30px">
@@ -48,20 +50,24 @@
 					BANGLADESH
 				</p>
 			</div>
-			<p class="sub_content"> ODI 1</p>
-			<hr class="rule" />
-			<p class="sub_content"> 
+			<p class="sub_content">ODI 1</p>
+			<hr class="rule250">
+			<p class="small_content"> 
 				STARTS IN 
-				<br/>
-				<div id="clock"></div>
 			</p>
-			<hr class="rule" style="width:250px;">
+			<div id="clock"></div>
+			<hr class="rule250">
 			<div class="sub_content" style="height:90px; margin-top:15px;margin-bottom:0;">
 				<div class="division" >
-					<p class="sub_content" >3/5<br>OPEN LEAGUES</p>
+					<p class="sub_content">3/5
+						<p class="small_content">Open Leagues</p>
+					</p>
 				</div>
 				<div class="division" >
-					<p class="sub_content" >INR 10,000<br>WORTH OF PRIZES</p>
+					<p class="sub_content">INR 10000
+						<p class="small_content">Worth of Prizes</p>
+					</p>
+
 				</div>
 				<div class="division" >
 					<p class="sub_content" >JOIN NOW</p>
@@ -74,8 +80,8 @@
 		<br/>
 	</div>
 	<script type="text/javascript">
-  $('#clock').countdown('2015/01/01', function(event) {
-    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+  $('#clock').countdown('2015/06/18', function(event) {
+    $(this).html(event.strftime('%d D : %H H : %M M : %S S'));
   });
 </script>
   </body>

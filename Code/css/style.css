@@ -51,14 +51,19 @@ li{
 	font-weight:800;
 }
 
-.sub_content{
+.sub_content, .small_content{
 	font: 18px lucida grande, sans-serif;
-	color:white;
+	color: #fff;
 	text-align:center;
+  margin: 2px;
+  width: 100%;
+}
+.small_content{
+  font-size: 14px;
 }
 
 .division{
-border: 1px solid rgba(230, 236, 237, 0.44);
+  border: 1px solid rgba(230, 236, 237, 0.44);
   /* border-right: 2px solid white; */
   padding: 10px;
   width: 33.33%;
@@ -95,9 +100,20 @@ border: 1px solid rgba(230, 236, 237, 0.44);
 	margin:0px auto;
 }
 
-.rule{
+.rule150, .rule250{
 	width:150px;
 	margin:0px auto;
 	text-align:center;
 }
+.rule250{
+  width:250px;
+}
+
+#clock{
+  text-align: center;
+  color: #fff;
+  font: 20px lucida grande, sans-serif;
+}
+
+
 
