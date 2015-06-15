@@ -1,5 +1,5 @@
 html{
-	  background:url('../img/landing.png');
+  background:url('../img/landing.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width:100%;
@@ -18,7 +18,7 @@ li{
 	margin:5% 0;
 }
  
-.bar{
+/*.bar{
 	background-color:rgba(255,255,255,1);
 	border-bottom:0px;
 	padding:35px 0;
@@ -27,9 +27,9 @@ li{
 
 .bar-nav ~ .content {
   padding-top: 160px;
-}
+}*/
  
- .content{
+ .hidebg{
 	background-color:rgba(0,0,0,0.4);
 }
 
@@ -37,7 +37,7 @@ li{
 	text-align:center; border:1px solid white; margin:5% auto; width:50%; padding:1%; color:white; font-size:24px;
 }
 
-.card{
+.card_revised{
 	margin:10px auto;
 	padding:2%;
 	background-color:rgba(12, 173, 168,0.3);
@@ -79,7 +79,7 @@ border: 1px solid rgba(230, 236, 237, 0.44);
   border-bottom: 1px white solid;
 }
 
-.title{
+.title_rev{
 	position:initial;
 	color:rgba(12, 173, 168,1);
 	font: 40px impact, sans-serif;
