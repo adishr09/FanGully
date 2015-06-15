@@ -9,20 +9,21 @@
 	<link href="css/ratchet.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="js/ratchet.js"></script>
+	<script src="js/jquery.countdown.js"></script>
   </head>
   <body>
-<!-- 	<header class="bar bar-nav">
+<!-- 	<header class="bar bar-nav ">
 	</header>
  -->	
- <div class="content">
+ <div class="content hidebg">
  		<div class="content-padded" style='margin-top:40px;margin-bottom:40px'>
-		  <h1 class="title">FANGULLY</h1>
+		  <h1 class="title title_rev">FANGULLY</h1>
 		  <hr class="rule">
 		  <h4 class="title_4">GAME OF SKILL</h4>
 		  <hr class="rule">
 	  </div>
 		<p class="sub_head">PLAY FANTASY CRICKET <br> & <br> WIN REAL CASH</p>
-		<div class="card" style="width:90%;margin-top:30px">
+		<div class="card card_revised" style="width:80%;margin-top:30px">
 			<p class="sub_head" style='font-size:14px'>GET STARTED IN 3 EASY STEPS</p>
 			<ol class="sub_content" style="text-align:left;">
 					<li>Enter Any Upcoming Match</li>
@@ -31,11 +32,11 @@
 			</ol>
 		</div>
 		<div class="misc">100% LEGAL</div>
-		<div class="card carded">
+		<div class="card carded card_revised">
 			<p class="sub_head" style="margin:0;">UPCOMING MATCHES</p> 
 		</div>
 		<br>
-		<div class="card carded no-bottom">
+		<div class="card carded no-bottom card_revised">
 			<p class="sub_head" style="margin-bottom:10px;font-size:14px">India's Tour of Bangladesh, 2015</p>
 			<div style='text-align:center;'>
 				<p class="sub_head" style="font-size:21px;width: 45%; display:inline-block;text-align:right;">
@@ -52,7 +53,7 @@
 			<p class="sub_content"> 
 				STARTS IN 
 				<br/>
-				2 D : 5 H : 27 M : 49 s
+				<div id="clock"></div>
 			</p>
 			<hr class="rule" style="width:250px;">
 			<div class="sub_content" style="height:90px; margin-top:15px;margin-bottom:0;">
@@ -72,5 +73,10 @@
 		<br/>
 		<br/>
 	</div>
+	<script type="text/javascript">
+  $('#clock').countdown('2015/01/01', function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+  });
+</script>
   </body>
 </html>
