@@ -2,8 +2,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>FanGully</title>
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery_1.js"></script>
+	<script src="js/selectize.js"></script>
 </head>
 <body>
 	<h1>Sample Form</h1>
@@ -27,15 +27,7 @@
 				<input class="submit" type="submit" value="Submit">
 			</p>
 		</fieldset>
-		<fieldset id="ques_2" style="display:none;">
-			<legend>Q2. Select the one player who will score maximum.</legend>
-			<select id="list_players" required></select>
-			<p>
-				<input type="submit" value="Submit">
-			</p>
-		</fieldset>
-	</form>
-	<script>
+		<script>
 		$(".checkbox").click(function() {
 			var numberOfChecked = $('input:checkbox:checked').length;
 			if(numberOfChecked < 5){
@@ -68,9 +60,29 @@
 				$('<option />', {value: val, text: data[val]}).appendTo('#list_players');
 			}
 			$('#ques_2').show(); 
-		}		
+		}
 		
+		$('#select-beast').selectize({
+					create: true,
+					sortField: {
+						field: 'text',
+						direction: 'asc'
+					},
+					dropdownParent: 'body'
+		});
 		
+		</script>
+		<fieldset id="ques_2" style="display:none;">
+			<legend>Q2. Select the one player who will score maximum.</legend>
+			<select id="list_players" class="demo-default" placeholder="Select a player..." required></select>
+			<p>
+				<input type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script>		
 		$.validator.setDefaults({
 		submitHandler: function() {
 			alert("Your entry has been submitted.");
