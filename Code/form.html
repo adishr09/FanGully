@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FanGully</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1 user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="css/ratchet.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/ratchet.js"></script>
+	<script src="js/js_validate_submission/jquery_1.js"></script>
+	<script src="js/js_validate_submission/selectize.js"></script>
+  </head>
+  <body>
+<!-- 	<header class="bar bar-nav ">
+	</header>
+ -->	
+ <div class="content hidebg">
+ 		<div class="card width90">
+			<p class="small_content">
+			<form class="cmxform" id="form1" method="get" action="">
+			<fieldset>
+				<legend>Q1. Select any five players.</legend>
+					<input type="checkbox" class="checkbox" id="a1" value="a" name="player[]" required minlength="5" maxlength="5">Shikhar Dhawan
+					<input type="checkbox" class="checkbox" id="a2" value="b" name="player[]">Virat Kohli
+					<input type="checkbox" class="checkbox" id="a3" value="c" name="player[]">Karan
+					<input type="checkbox" class="checkbox" id="a4" value="d" name="player[]">Murali Vijay
+					<input type="checkbox" class="checkbox" id="a5" value="e" name="player[]">Shikhar Dhawan
+					<input type="checkbox" class="checkbox" id="a6" value="f" name="player[]">Virat Kohli
+					<input type="checkbox" class="checkbox" id="a7" value="g" name="player[]">Karan
+					<input type="checkbox" class="checkbox" id="a8" value="h" name="player[]">Murali Vijay
+					<input type="checkbox" class="checkbox" id="a9" value="i" name="player[]">Shikhar Dhawan
+					<input type="checkbox" class="checkbox" id="a10" value="j" name="player[]">Virat Kohli
+				<br>
+				<label for="player[]" class="error" style="display:none;">Please select any five players.</label>
+				<br>
+				<p style="display:none;">
+					<input class="submit" type="submit" value="Submit">
+				</p>
+			</fieldset>
+			<script>
+			$(".checkbox").click(function() {
+				var numberOfChecked = $('input:checkbox:checked').length;
+				if(numberOfChecked < 5){
+					$('#ques_2').hide();
+				}
+				if(numberOfChecked > 5){
+					$(".error").show();
+					$(".error").text("No more than 5 players allowed.");
+					$('#ques_2').hide();
+				}
+				else if(numberOfChecked == 5){
+					$(".error").hide();
+					var data = [];
+					var data_id = [];
+					for(var i=0;i<10;i++)
+					{
+						var q = 'a'+(i+1);
+						if($('#'+q).is(":checked")){
+							data.push($("input[name='player[]']")[i].nextSibling.nodeValue);
+							data_id.push(q);
+						}
+					}
+					insert_drop(data);
+				}
+			});
+			
+			function insert_drop(data){
+				$('#list_players').empty()
+				for(var val in data) {
+					$('<option />', {value: val, text: data[val]}).appendTo('#list_players');
+				}
+				$('#ques_2').show(); 
+			}
+			
+			$('#select-beast').selectize({
+						create: true,
+						sortField: {
+							field: 'text',
+							direction: 'asc'
+						},
+						dropdownParent: 'body'
+			});
+			
+			</script>
+			<fieldset id="ques_2" style="display:none;">
+					<legend>Q2. Select the one player who will score maximum.</legend>
+					<select id="list_players" class="demo-default" placeholder="Select a player..." required></select>
+					<p>
+						<input type="submit" value="Submit">
+					</p>
+				</fieldset>
+			</form>
+			<script src="js/js_validate_submission/jquery.js"></script>
+			<script src="js/js_validate_submission/jquery.validate.js"></script>
+			<script>		
+				$.validator.setDefaults({
+				submitHandler: function() {
+					alert("Your entry has been submitted.");
+				}
+			});
+
+			$(document).ready(function() {
+				$("#form1").validate();
+				$("#selecttest").validate();
+			});
+			</script>
+		</div>
+		</div>
+  </body>
+</html>
